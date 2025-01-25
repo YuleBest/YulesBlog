@@ -83,7 +83,7 @@ fun_features:
   # 为 subtitle 添加打字机效果
   # Typing animation for subtitle
   typing:
-    enable: true
+    enable: false
 
     # 打印速度，数字越大越慢
     # Typing speed, the larger the number, the slower
@@ -143,41 +143,41 @@ color:
   body_bg_color: "#eee"
   # 暗色模式下的 body 背景色，下同
   # Color in dark mode, the same below
-  body_bg_color_dark: "#181c27"
+  body_bg_color_dark: "#121212"
+
+  # 主面板背景色
+  # Color of main board
+  board_color: "#eee"
+  board_color_dark: "#121212"
 
   # 顶部菜单背景色
   # Color of navigation bar background
-  navbar_bg_color: "#2f4154"
-  navbar_bg_color_dark: "#1f3144"
+  navbar_bg_color: "#eee"
+  navbar_bg_color_dark: "#121212"
 
   # 顶部菜单字体色
   # Color of navigation bar text
-  navbar_text_color: "#fff"
-  navbar_text_color_dark: "#d0d0d0"
+  navbar_text_color: "#222831"
+  navbar_text_color_dark: "#EEEEEE"
 
   # 副标题字体色
   # Color of subtitle text
   subtitle_color: "#fff"
-  subtitle_color_dark: "#d0d0d0"
+  subtitle_color_dark: "#fff"
 
   # 全局字体色
   # Color of global text
-  text_color: "#3c4858"
-  text_color_dark: "#c4c6c9"
+  text_color: "#121212"
+  text_color_dark: "#fff"
 
   # 全局次级字体色（摘要、简介等位置）
   # Color of global secondary text (excerpt, introduction, etc.)
   sec_text_color: "#718096"
   sec_text_color_dark: "#a7a9ad"
 
-  # 主面板背景色
-  # Color of main board
-  board_color: "#fff"
-  board_color_dark: "#252d38"
-
   # 文章正文字体色
   # Color of post text
-  post_text_color: "#2c3e50"
+  post_text_color: "#121212"
   post_text_color_dark: "#c4c6c9"
 
   # 文章正文字体色（h1 h2 h3...）
@@ -202,8 +202,8 @@ color:
 
   # 分隔线和表格边线的颜色
   # Color of horizontal rule and table border
-  line_color: "#eaecef"
-  line_color_dark: "#435266"
+  line_color: "#727D73"
+  line_color_dark: "#322C2B"
 
   # 滚动条颜色
   # Color of scrollbar
@@ -227,7 +227,7 @@ color:
 # Font
 font:
   font_size: 16px
-  font_family:
+  font_family: "'Google Sans', sans-serif"
   letter_spacing: 0.02em
   code_font_size: 85%
 
@@ -323,7 +323,7 @@ lazyload:
 
   # 加载时的占位图片
   # The placeholder image when loading
-  loading_img: /img/loading.gif
+  loading_img: /img/rikka_loading.gif
 
   # 开启后懒加载仅在文章页生效，如果自定义页面需要使用，可以在 Front-matter 里指定 `lazyload: true`
   # If true, only enable lazyload on the post page. For custom pages, you can set 'lazyload: true' in front-matter
@@ -353,7 +353,7 @@ navbar:
   # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
   # Navigation bar frosted glass special animation. It is an experimental feature
   ground_glass:
-    enable: true
+    enable: false
 
     # 模糊像素，只能为数字，数字越大模糊度越高
     # Number of blurred pixel. the larger the number, the higher the blur
@@ -446,7 +446,7 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>爱来自 </span></a>
+    <a href="https://github.com/YuleBest" target="_blank" rel="nofollow noopener"><span>爱来自 </span></a>
     <i class="iconfont icon-github-fill"></i>
     <a href="https://github.com/YuleBest" target="_blank" rel="nofollow noopener"><span>Yule</span></a>
   '
@@ -454,7 +454,7 @@ footer:
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
   statistics:
-    enable: false
+    enable: true
 
     # 统计数据来源，使用 leancloud, umami 需要设置 `web_analytics` 中对应的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
     # Data source. If use leancloud, umami, you need to set the parameter in `web_analytics`
@@ -598,7 +598,7 @@ post:
     # 浏览量计数
     # Number of visits
     views:
-      enable: false
+      enable: true
       # 统计数据来源
       # Data Source
       # Options: busuanzi | leancloud | umami
@@ -1060,11 +1060,11 @@ links:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
+    type: utterances
 
 
 #---------------------------

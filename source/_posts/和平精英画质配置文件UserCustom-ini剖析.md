@@ -18,7 +18,7 @@ index_img: https://maxpcimg.cc/i/2025/01/20/678deb163c6ae.jpg
 
 > 以下内容均使用用户 0 即主应用作演示
 
-如果你安装了和平精英，你可以在 `/storage/emulated/0/Android/data/com.tencent.tmgp.pubgmhd/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/UserCustom.ini` 找到这个配置文件，文件为 [INI 格式](www.gy328.com/ref/docs/ini.html)，遵守了 INI 格式的基本规范，但对部分内容做了加密。
+如果你安装了和平精英，你可以在 `/storage/emulated/0/Android/data/com.tencent.tmgp.pubgmhd/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/UserCustom.ini` 找到这个配置文件，文件为 [INI 格式](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)，遵守了 INI 格式的基本规范，但对部分内容做了加密。
 
 打开这个文件，你会看到这样的结构：
 
@@ -47,7 +47,7 @@ index_img: https://maxpcimg.cc/i/2025/01/20/678deb163c6ae.jpg
 
 我们先分析一下配置部分。
 
-这部分第一行会有一个[节](https:# zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)：`[UserCustom DeviceProfile]` 来做标志，随后是固定的 `+CVars=...` 格式，这里的 `...` 实际上是经过 16 进制转换后再进行简单[替换加密](https:# baike.baidu.com/item/%E6%9B%BF%E6%8D%A2%E5%BC%8F%E5%AF%86%E7%A0%81/10197380)的产物。密文的每两个字符可以对应为明文的一个字符。
+这部分第一行会有一个[节](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)：`[UserCustom DeviceProfile]` 来做标志，随后是固定的 `+CVars=...` 格式，这里的 `...` 实际上是经过 16 进制转换后再进行简单[替换加密](https://baike.baidu.com/item/%E6%9B%BF%E6%8D%A2%E5%BC%8F%E5%AF%86%E7%A0%81/10197380)的产物。密文的每两个字符可以对应为明文的一个字符。
 
 经过分析，我们得到了这个映射表：
 
